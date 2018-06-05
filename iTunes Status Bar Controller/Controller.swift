@@ -5,9 +5,7 @@
 //  Created by Qihao Leng on 6/4/18.
 //
 
-import Foundation
 import Cocoa
-import ScriptingBridge
 
 extension NSStatusItem {
 		
@@ -22,20 +20,33 @@ extension NSStatusItem {
 
 class iTunesController {
 	
-	let iTunes: iTunesApplication
 	
-	init() {
-		iTunes = SBApplication(bundleIdentifier: "com.apple.iTunes")! as iTunesApplication
+	static func isPlaying() -> Bool {
+		let command = "tell application \"iTunes\" \n player state \n end tell"
+		var error: NSDictionary?
+		let result: String?
+		result = NSAppleScript(source: command)!.executeAndReturnError(&error).stringValue
+		return iTunesEPlS.playing.rawValue == result!.toUTF8()
 	}
 	
-	func isRunning() -> Bool {
-		print(iTunes.isRunning)
-		return iTunes.isRunning
+	static func isPaused() -> Bool {
+		let command = "tell application \"iTunes\" \n player state \n end tell"
+		var error: NSDictionary?
+		let result: String?
+		result = NSAppleScript(source: command)!.executeAndReturnError(&error).stringValue
+		return iTunesEPlS.paused.rawValue == result!.toUTF8()
 	}
+}
+
+extension String {
 	
-	func isPlaying() -> Bool {
-		print(String(Int(iTunes.playerState!.rawValue), radix:16))
-		return (iTunes.playerState! == .playing)
+	func toUTF8() -> AEKeyword {
+		var result = 0 as UInt32
+		for char in Array(self.utf8) {
+			result = result << 8 + UInt32(char)
+		}
+		
+		return UInt32(result)
 	}
 }
 

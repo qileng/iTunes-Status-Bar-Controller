@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED93B5B320C719FE00E78EED /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED93B5B120C718CC00E78EED /* MediaPlayer.framework */; };
+		ED93B5E220C728DA00E78EED /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B5E020C728DA00E78EED /* iTunes.swift */; };
+		ED93B5E320C728DA00E78EED /* iTunesScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B5E120C728DA00E78EED /* iTunesScripting.swift */; };
 		EDE59B3F20C644FF00C86BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B3E20C644FF00C86BDB /* AppDelegate.swift */; };
 		EDE59B4320C6450200C86BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE59B4220C6450200C86BDB /* Assets.xcassets */; };
 		EDE59B5220C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5120C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift */; };
 		EDE59B5D20C64BDC00C86BDB /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5C20C64BDC00C86BDB /* Controller.swift */; };
 		EDE59B5E20C64BDC00C86BDB /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5C20C64BDC00C86BDB /* Controller.swift */; };
-		EDE59B6120C64F9C00C86BDB /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE59B6020C64F9C00C86BDB /* ScriptingBridge.framework */; };
-		EDE59B6920C67F9D00C86BDB /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B6720C67F9C00C86BDB /* iTunes.swift */; };
-		EDE59B6A20C67F9D00C86BDB /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B6720C67F9C00C86BDB /* iTunes.swift */; };
-		EDE59B6B20C67F9D00C86BDB /* iTunesScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B6820C67F9D00C86BDB /* iTunesScripting.swift */; };
-		EDE59B6C20C67F9D00C86BDB /* iTunesScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B6820C67F9D00C86BDB /* iTunesScripting.swift */; };
 		EDE59B7520C683E900C86BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE59B7320C683E900C86BDB /* Main.storyboard */; };
 		EDE59B7620C683E900C86BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE59B7320C683E900C86BDB /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -32,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED93B5B120C718CC00E78EED /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		ED93B5E020C728DA00E78EED /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
+		ED93B5E120C728DA00E78EED /* iTunesScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesScripting.swift; sourceTree = "<group>"; };
 		EDE59B3B20C644FF00C86BDB /* iTunes Status Bar Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Status Bar Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE59B3E20C644FF00C86BDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE59B4220C6450200C86BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,9 +42,6 @@
 		EDE59B5120C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_Status_Bar_ControllerTests.swift; sourceTree = "<group>"; };
 		EDE59B5320C6450200C86BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE59B5C20C64BDC00C86BDB /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		EDE59B6020C64F9C00C86BDB /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
-		EDE59B6720C67F9C00C86BDB /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
-		EDE59B6820C67F9D00C86BDB /* iTunesScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesScripting.swift; sourceTree = "<group>"; };
 		EDE59B7420C683E900C86BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE59B6120C64F9C00C86BDB /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED93B5B320C719FE00E78EED /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +89,8 @@
 				EDE59B7320C683E900C86BDB /* Main.storyboard */,
 				EDE59B3E20C644FF00C86BDB /* AppDelegate.swift */,
 				EDE59B5C20C64BDC00C86BDB /* Controller.swift */,
-				EDE59B6720C67F9C00C86BDB /* iTunes.swift */,
-				EDE59B6820C67F9D00C86BDB /* iTunesScripting.swift */,
+				ED93B5E020C728DA00E78EED /* iTunes.swift */,
+				ED93B5E120C728DA00E78EED /* iTunesScripting.swift */,
 				EDE59B4220C6450200C86BDB /* Assets.xcassets */,
 				EDE59B4720C6450200C86BDB /* Info.plist */,
 				EDE59B4820C6450200C86BDB /* iTunes_Status_Bar_Controller.entitlements */,
@@ -112,7 +110,7 @@
 		EDE59B5F20C64F9C00C86BDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EDE59B6020C64F9C00C86BDB /* ScriptingBridge.framework */,
+				ED93B5B120C718CC00E78EED /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,8 +122,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDE59B5620C6450200C86BDB /* Build configuration list for PBXNativeTarget "iTunes Status Bar Controller" */;
 			buildPhases = (
-				EDE59B3720C644FF00C86BDB /* Sources */,
 				EDE59B3820C644FF00C86BDB /* Frameworks */,
+				EDE59B3720C644FF00C86BDB /* Sources */,
 				EDE59B3920C644FF00C86BDB /* Resources */,
 			);
 			buildRules = (
@@ -220,9 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE59B3F20C644FF00C86BDB /* AppDelegate.swift in Sources */,
-				EDE59B6920C67F9D00C86BDB /* iTunes.swift in Sources */,
+				ED93B5E220C728DA00E78EED /* iTunes.swift in Sources */,
 				EDE59B5D20C64BDC00C86BDB /* Controller.swift in Sources */,
-				EDE59B6B20C67F9D00C86BDB /* iTunesScripting.swift in Sources */,
+				ED93B5E320C728DA00E78EED /* iTunesScripting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,9 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE59B5220C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift in Sources */,
-				EDE59B6A20C67F9D00C86BDB /* iTunes.swift in Sources */,
 				EDE59B5E20C64BDC00C86BDB /* Controller.swift in Sources */,
-				EDE59B6C20C67F9D00C86BDB /* iTunesScripting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

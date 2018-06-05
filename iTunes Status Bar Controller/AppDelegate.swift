@@ -15,21 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 		statusItem.setUp()
-		let myController = iTunesController()
-		print(myController.isRunning())
-		if myController.isPlaying() {
-			print("playing")
-		} else {
-			print("not playing")
-		}
-		myController.iTunes.run!()
-		myController.iTunes.playpause!()
-		if myController.isPlaying() {
-			print("playing")
-		} else {
-			print("not playing")
-		}
-//		myController.iTunes.quit!()
+		print(iTunesController.isPlaying())
+		print(iTunesController.isPaused())
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
