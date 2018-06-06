@@ -17,7 +17,6 @@
 		ED975CCF20C79F9400B74F7A /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED975CCE20C79F9400B74F7A /* ServiceManagement.framework */; };
 		EDE59B3F20C644FF00C86BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B3E20C644FF00C86BDB /* AppDelegate.swift */; };
 		EDE59B4320C6450200C86BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE59B4220C6450200C86BDB /* Assets.xcassets */; };
-		EDE59B5220C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5120C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift */; };
 		EDE59B5D20C64BDC00C86BDB /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5C20C64BDC00C86BDB /* Controller.swift */; };
 		EDE59B5E20C64BDC00C86BDB /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5C20C64BDC00C86BDB /* Controller.swift */; };
 		EDE59B7520C683E900C86BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE59B7320C683E900C86BDB /* Main.storyboard */; };
@@ -64,8 +63,6 @@
 		EDE59B4720C6450200C86BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE59B4820C6450200C86BDB /* iTunes_Status_Bar_Controller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iTunes_Status_Bar_Controller.entitlements; sourceTree = "<group>"; };
 		EDE59B4D20C6450200C86BDB /* iTunes Status Bar ControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes Status Bar ControllerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDE59B5120C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_Status_Bar_ControllerTests.swift; sourceTree = "<group>"; };
-		EDE59B5320C6450200C86BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE59B5C20C64BDC00C86BDB /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		EDE59B7420C683E900C86BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				EDE59B3D20C644FF00C86BDB /* iTunes Status Bar Controller */,
-				EDE59B5020C6450200C86BDB /* iTunes Status Bar ControllerTests */,
 				ED975CBD20C79EA900B74F7A /* Launcher */,
 				EDE59B3C20C644FF00C86BDB /* Products */,
 				EDE59B5F20C64F9C00C86BDB /* Frameworks */,
@@ -143,15 +139,6 @@
 				EDE59B4820C6450200C86BDB /* iTunes_Status_Bar_Controller.entitlements */,
 			);
 			path = "iTunes Status Bar Controller";
-			sourceTree = "<group>";
-		};
-		EDE59B5020C6450200C86BDB /* iTunes Status Bar ControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				EDE59B5120C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift */,
-				EDE59B5320C6450200C86BDB /* Info.plist */,
-			);
-			path = "iTunes Status Bar ControllerTests";
 			sourceTree = "<group>";
 		};
 		EDE59B5F20C64F9C00C86BDB /* Frameworks */ = {
@@ -315,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE59B5220C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift in Sources */,
 				EDE59B5E20C64BDC00C86BDB /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,7 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Q.L..iTunes-Status-Bar-ControllerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iTunes Status Bar Controller/iTunes Status Bar ControllerTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunes Status Bar Controller.app/Contents/MacOS/iTunes Status Bar Controller";
@@ -590,7 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Q.L..iTunes-Status-Bar-ControllerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iTunes Status Bar Controller/iTunes Status Bar ControllerTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunes Status Bar Controller.app/Contents/MacOS/iTunes Status Bar Controller";
 			};
