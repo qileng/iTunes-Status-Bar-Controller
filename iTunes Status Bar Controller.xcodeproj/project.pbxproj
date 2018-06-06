@@ -10,6 +10,11 @@
 		ED93B5B320C719FE00E78EED /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED93B5B120C718CC00E78EED /* MediaPlayer.framework */; };
 		ED93B5E220C728DA00E78EED /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B5E020C728DA00E78EED /* iTunes.swift */; };
 		ED93B5E320C728DA00E78EED /* iTunesScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93B5E120C728DA00E78EED /* iTunesScripting.swift */; };
+		ED975CBF20C79EA900B74F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED975CBE20C79EA900B74F7A /* AppDelegate.swift */; };
+		ED975CC320C79EAB00B74F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED975CC220C79EAB00B74F7A /* Assets.xcassets */; };
+		ED975CC620C79EAB00B74F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED975CC420C79EAB00B74F7A /* Main.storyboard */; };
+		ED975CCD20C79F7300B74F7A /* Launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED975CBC20C79EA900B74F7A /* Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED975CCF20C79F9400B74F7A /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED975CCE20C79F9400B74F7A /* ServiceManagement.framework */; };
 		EDE59B3F20C644FF00C86BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B3E20C644FF00C86BDB /* AppDelegate.swift */; };
 		EDE59B4320C6450200C86BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE59B4220C6450200C86BDB /* Assets.xcassets */; };
 		EDE59B5220C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE59B5120C6450200C86BDB /* iTunes_Status_Bar_ControllerTests.swift */; };
@@ -29,10 +34,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ED975CCC20C79F5600B74F7A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				ED975CCD20C79F7300B74F7A /* Launcher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ED93B5B120C718CC00E78EED /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		ED93B5E020C728DA00E78EED /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
 		ED93B5E120C728DA00E78EED /* iTunesScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesScripting.swift; sourceTree = "<group>"; };
+		ED975CBC20C79EA900B74F7A /* Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED975CBE20C79EA900B74F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED975CC220C79EAB00B74F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED975CC520C79EAB00B74F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED975CC720C79EAB00B74F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED975CC820C79EAB00B74F7A /* Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Launcher.entitlements; sourceTree = "<group>"; };
+		ED975CCE20C79F9400B74F7A /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		EDE59B3B20C644FF00C86BDB /* iTunes Status Bar Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Status Bar Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE59B3E20C644FF00C86BDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE59B4220C6450200C86BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,10 +71,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED975CB920C79EA900B74F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDE59B3820C644FF00C86BDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED975CCF20C79F9400B74F7A /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,11 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED975CBD20C79EA900B74F7A /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				ED975CBE20C79EA900B74F7A /* AppDelegate.swift */,
+				ED975CC220C79EAB00B74F7A /* Assets.xcassets */,
+				ED975CC420C79EAB00B74F7A /* Main.storyboard */,
+				ED975CC720C79EAB00B74F7A /* Info.plist */,
+				ED975CC820C79EAB00B74F7A /* Launcher.entitlements */,
+			);
+			path = Launcher;
+			sourceTree = "<group>";
+		};
 		EDE59B3220C644FF00C86BDB = {
 			isa = PBXGroup;
 			children = (
 				EDE59B3D20C644FF00C86BDB /* iTunes Status Bar Controller */,
 				EDE59B5020C6450200C86BDB /* iTunes Status Bar ControllerTests */,
+				ED975CBD20C79EA900B74F7A /* Launcher */,
 				EDE59B3C20C644FF00C86BDB /* Products */,
 				EDE59B5F20C64F9C00C86BDB /* Frameworks */,
 			);
@@ -79,6 +125,7 @@
 			children = (
 				EDE59B3B20C644FF00C86BDB /* iTunes Status Bar Controller.app */,
 				EDE59B4D20C6450200C86BDB /* iTunes Status Bar ControllerTests.xctest */,
+				ED975CBC20C79EA900B74F7A /* Launcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +157,7 @@
 		EDE59B5F20C64F9C00C86BDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED975CCE20C79F9400B74F7A /* ServiceManagement.framework */,
 				ED93B5B120C718CC00E78EED /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
@@ -118,6 +166,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ED975CBB20C79EA900B74F7A /* Launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED975CCB20C79EAB00B74F7A /* Build configuration list for PBXNativeTarget "Launcher" */;
+			buildPhases = (
+				ED975CB820C79EA900B74F7A /* Sources */,
+				ED975CB920C79EA900B74F7A /* Frameworks */,
+				ED975CBA20C79EA900B74F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Launcher;
+			productName = Launcher;
+			productReference = ED975CBC20C79EA900B74F7A /* Launcher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EDE59B3A20C644FF00C86BDB /* iTunes Status Bar Controller */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDE59B5620C6450200C86BDB /* Build configuration list for PBXNativeTarget "iTunes Status Bar Controller" */;
@@ -125,6 +190,7 @@
 				EDE59B3820C644FF00C86BDB /* Frameworks */,
 				EDE59B3720C644FF00C86BDB /* Sources */,
 				EDE59B3920C644FF00C86BDB /* Resources */,
+				ED975CCC20C79F5600B74F7A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -162,6 +228,9 @@
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				TargetAttributes = {
+					ED975CBB20C79EA900B74F7A = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					EDE59B3A20C644FF00C86BDB = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
@@ -188,11 +257,21 @@
 			targets = (
 				EDE59B3A20C644FF00C86BDB /* iTunes Status Bar Controller */,
 				EDE59B4C20C6450200C86BDB /* iTunes Status Bar ControllerTests */,
+				ED975CBB20C79EA900B74F7A /* Launcher */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ED975CBA20C79EA900B74F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED975CC320C79EAB00B74F7A /* Assets.xcassets in Resources */,
+				ED975CC620C79EAB00B74F7A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDE59B3920C644FF00C86BDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +292,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ED975CB820C79EA900B74F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED975CBF20C79EA900B74F7A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDE59B3720C644FF00C86BDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +331,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ED975CC420C79EAB00B74F7A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED975CC520C79EAB00B74F7A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		EDE59B7320C683E900C86BDB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -255,6 +350,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ED975CC920C79EAB00B74F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Launcher/Launcher.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Launcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Q.L..Launcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		ED975CCA20C79EAB00B74F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Launcher/Launcher.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Launcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Q.L..Launcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		EDE59B5420C6450200C86BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -464,6 +599,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED975CCB20C79EAB00B74F7A /* Build configuration list for PBXNativeTarget "Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED975CC920C79EAB00B74F7A /* Debug */,
+				ED975CCA20C79EAB00B74F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EDE59B3620C644FF00C86BDB /* Build configuration list for PBXProject "iTunes Status Bar Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

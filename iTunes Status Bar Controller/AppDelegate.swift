@@ -6,6 +6,11 @@
 //
 
 import Cocoa
+import ServiceManagement
+
+extension Notification.Name {
+	static let killLauncher = Notification.Name("killLauncher")
+}
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
@@ -15,7 +20,30 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
-		myController = iTunesController(&statusItem, self)
+		// Kill launcher
+		let launcherAppId = "Q.L..Launcher"
+		var runningApps = NSWorkspace.shared.runningApplications
+		var isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+		
+		SMLoginItemSetEnabled(launcherAppId as CFString, true)
+		
+		if isRunning {
+			DistributedNotificationCenter.default().post(name: .killLauncher,
+														 object: Bundle.main.bundleIdentifier!)
+		}
+		myController = iTunesController()
+		// Detect iTunes
+		let iTunesAppId = "com.apple.iTunes"
+		runningApps = NSWorkspace.shared.runningApplications
+		isRunning = !runningApps.filter { $0.bundleIdentifier == iTunesAppId }.isEmpty
+		print(isRunning)
+		
+		if isRunning {
+			myController!.setUp(&statusItem, self)
+		} else {
+			myController!.setUpEmpty(&statusItem, self)
+		}
+		
 //		statusItem.menu!.items[0].target = myController
 //		statusItem.menu!.items[0].action = #selector(myController.setPlayPause)
 //		print(myController.isPlaying())
@@ -24,6 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
+		print("terminated")
 	}
 
 	@objc func setPlayPause() {
@@ -55,7 +84,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	}
 	
 	func menuWillOpen(_ menu: NSMenu) {
-		myController!.update(menu)
+		if !myController!.isPreviouslyRunning {
+			let launcherAppId = "com.apple.iTunes"
+			let runningApps = NSWorkspace.shared.runningApplications
+			let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+			
+			if isRunning {
+				myController?.setUp(&statusItem, self)
+			}
+		} else {
+			myController!.update(menu)
+		}
 	}
 }
 

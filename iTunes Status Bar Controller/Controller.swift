@@ -16,22 +16,25 @@ enum TrackPosition: String {
 
 class iTunesController: NSObject, NSMenuDelegate {
 	
+	var isPreviouslyRunning: Bool = false
+	
 	override init() {
 		super.init()
 	}
-	
-	init(_ s: inout NSStatusItem, _ a: AppDelegate) {
-		super.init()
-		self.setUp(&s, a)
-	}
-	
+
 	func setUp(_ s: inout NSStatusItem, _ a: AppDelegate) {
+		self.isPreviouslyRunning = true
 		let menu =  NSMenu(title: "iTunes Controller")
 		let playPause = NSMenuItem(title: "Play/Pause", action: #selector(a.setPlayPause), keyEquivalent: String())
 //		let nextTrackName = self.getTrackName(.next)
 		let playNext = NSMenuItem(title: "Play Next", action: #selector(a.playNext), keyEquivalent: String())
-		let currentTackName = self.getTrackName(.current)
-		let currentTrack = NSMenuItem(title: "Now Playing: " + currentTackName, action: nil, keyEquivalent: String())
+		let currentTrack: NSMenuItem
+		if !self.isStopped() {
+			let currentTackName = self.getTrackName(.current)
+			currentTrack = NSMenuItem(title: "Now Playing: " + currentTackName, action: nil, keyEquivalent: String())
+		} else {
+			currentTrack = NSMenuItem(title: "Player Stopped ", action: nil, keyEquivalent: String())
+		}
 		let backTrack = NSMenuItem(title: "Back Track", action: #selector(a.backTrack), keyEquivalent: String())
 //		let previousTrackName = self.getTrackName(.previous)
 		let playPrevious = NSMenuItem(title: "Play Previous", action: #selector(a.playPrevious), keyEquivalent: String())
@@ -49,14 +52,31 @@ class iTunesController: NSObject, NSMenuDelegate {
 		s.image = #imageLiteral(resourceName: "iTunes")
 	}
 	
-	func update(_ menu: NSMenu) {
-		let currentTrackName = self.getTrackName(.current)
-//		let nextTrackName = self.getTrackName(.next)
-//		let previousTrackName = self.getTrackName(.previous)
+	func setUpEmpty(_ s: inout NSStatusItem, _ a: AppDelegate) {
+		let menu =  NSMenu(title: "iTunes Controller")
+		let notRunning = NSMenuItem(title: "iTunes not running", action: nil, keyEquivalent: String())
 		
-		menu.items[0].title = "Now Playing: " + currentTrackName
-//		menu.items[2].title = "Play Next: " + nextTrackName
-//		menu.items[4].title = "Play Previous: " + previousTrackName
+		menu.addItem(notRunning)
+		
+		s.menu = menu
+		s.menu!.autoenablesItems = true
+		s.menu!.delegate = a
+		s.image = #imageLiteral(resourceName: "iTunes")
+	}
+	
+	func update(_ menu: NSMenu) {		
+		
+		if !self.isStopped() {
+			let currentTrackName = self.getTrackName(.current)
+			//		let nextTrackName = self.getTrackName(.next)
+			//		let previousTrackName = self.getTrackName(.previous)
+			
+			menu.items[0].title = "Now Playing: " + currentTrackName
+			//		menu.items[2].title = "Play Next: " + nextTrackName
+			//		menu.items[4].title = "Play Previous: " + previousTrackName
+		} else {
+			menu.items[0].title = "Player Stopped."
+		}
 	}
 	
 	func isPlaying() -> Bool {
@@ -73,6 +93,14 @@ class iTunesController: NSObject, NSMenuDelegate {
 		let result: String?
 		result = NSAppleScript(source: command)!.executeAndReturnError(&error).stringValue
 		return iTunesEPlS.paused.rawValue == result!.toUTF8()
+	}
+	
+	func isStopped() -> Bool {
+		let command = "tell application \"iTunes\" \n player state \n end tell"
+		var error: NSDictionary?
+		let result: String?
+		result = NSAppleScript(source: command)!.executeAndReturnError(&error).stringValue
+		return iTunesEPlS.stopped.rawValue == result!.toUTF8()
 	}
 	
 	func getTrackName(_ t: TrackPosition) -> String {
